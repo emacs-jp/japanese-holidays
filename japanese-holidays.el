@@ -54,6 +54,7 @@
 ;;; Change Log:
 
 ;; Original program created by T. Hattori 1999/4/20
+;;      http://www.meadowy.org/meadow/netinstall/export/799/branches/3.00/pkginfo/japanese-holidays/japanese-holidays.el
 ;;
 ;; 9/1/2013
 ;;	* 関数・変数名を "japanese-holiday-" prefix に統一
