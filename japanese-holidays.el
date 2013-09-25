@@ -1,4 +1,4 @@
-;;; japanese-holidays.el --- calendar functions for the Japanese calendar
+;;; japanese-holidays.el --- calendar functions for the Japanese calendar -*- lexical-binding: t; -*-
 
 ;; Filename: japanese-holidays.el
 ;; Description: Calendar functions for the Japanese calendar
@@ -9,6 +9,7 @@
 ;; Keywords: calendar
 ;; Prefix: japanese-holiday-
 ;; URL: https://github.com/kawabata/japanese-calendar
+;; Package-Requires: ((cl-lib "0.3"))
 
 ;; Copyright (C) 1999 Takashi Hattori <hattori@sfc.keio.ac.jp>
 ;; Copyright (C) 2005 Hiroya Murata <lapis-lazuli@pop06.odn.ne.jp>
@@ -367,10 +368,10 @@ It can be face face, or list of faces for corresponding weekdays."
 
 (provide 'japanese-holidays)
 
-;;; japanese-holidays.el ends here
-
 ;; Local Variables:
-;; lexical-binding: t
 ;; coding: utf-8
 ;; time-stamp-pattern: "10/Version:\\\\?[ \t]+1.%02y%02m%02d\\\\?\n"
 ;; End:
+
+;;; japanese-holidays.el ends here
+
