@@ -5,7 +5,7 @@
 ;; Author: Takashi Hattori <hattori@sfc.keio.ac.jp>
 ;;	Hiroya Murata <lapis-lazuli@pop06.odn.ne.jp>
 ;; Created: 1999-04-20
-;; Version: 1.130921
+;; Version: 1.130927
 ;; Keywords: calendar
 ;; Prefix: japanese-holiday-
 ;; URL: https://github.com/kawabata/japanese-calendar
@@ -62,6 +62,7 @@
 ;;      * obosolete化された変数名を最新の名前に更新
 ;;      * 文字コードを UTF-8 に変更
 ;;      * 土曜日・日曜日で異なるfaceを設定できるように変更
+;;        (idea from http://blog.livedoor.jp/tek_nishi/archives/3027665.html)
 ;;      * calendar-weekend-marker を japanese-holiday-weekend-marker に変更
 ;;      * ドキュメントの調整
 ;;      (Modified by kawabata.taichi_at_gmail.com)
