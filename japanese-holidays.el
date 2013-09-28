@@ -5,10 +5,10 @@
 ;; Author: Takashi Hattori <hattori@sfc.keio.ac.jp>
 ;;	Hiroya Murata <lapis-lazuli@pop06.odn.ne.jp>
 ;; Created: 1999-04-20
-;; Version: 1.130927
+;; Version: 1.130928
 ;; Keywords: calendar
 ;; Prefix: japanese-holiday-
-;; URL: https://github.com/kawabata/japanese-calendar
+;; URL: https://github.com/emacs-jp/japanese-holidays
 ;; Package-Requires: ((cl-lib "0.3"))
 
 ;; Copyright (C) 1999 Takashi Hattori <hattori@sfc.keio.ac.jp>
@@ -31,9 +31,10 @@
 
 ;;; Commentary:
 
-;; このプログラムは、calender で表示出来る様に日本の祝日を設定します。
-;; 使用するには、このファイルを load-path の通った所に置き、
-;; ~/.emacs.d/init.el に以下の設定を追加します。
+;; このプログラムは、calender で日本の祝日を表示できるように
+;; japanese-holidays 変数を定義します。使用するには、このファイルを
+;; load-path の通った所に置き、~/.emacs.d/init.el に以下の設定を追加し
+;; ます。
 
 ;; (eval-after-load "holidays"
 ;;   '(progn
@@ -233,7 +234,7 @@ It can be face face, or list of faces for corresponding weekdays."
 
 (defface japanese-holiday-saturday
   '((((class color) (background light))
-     :background "blue")
+     :background "sky blue")
     (((class color) (background dark))
      :background "blue")
     (t
@@ -375,4 +376,3 @@ It can be face face, or list of faces for corresponding weekdays."
 ;; End:
 
 ;;; japanese-holidays.el ends here
-
