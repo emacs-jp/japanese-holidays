@@ -5,7 +5,7 @@
 ;; Author: Takashi Hattori <hattori@sfc.keio.ac.jp>
 ;;	Hiroya Murata <lapis-lazuli@pop06.odn.ne.jp>
 ;; Created: 1999-04-20
-;; Version: 1.130928
+;; Version: 1.140620
 ;; Keywords: calendar
 ;; Prefix: japanese-holiday-
 ;; URL: https://github.com/emacs-jp/japanese-holidays
@@ -31,10 +31,11 @@
 
 ;;; Commentary:
 
-;; このプログラムは、calender で日本の祝日を表示できるように
-;; japanese-holidays 変数を定義します。使用するには、このファイルを
-;; load-path の通った所に置き、~/.emacs.d/init.el に以下の設定を追加し
-;; ます。
+;; This utility defines Japanese holiday for calendar function. This
+;; also enables to display weekends or any weekday with preferred
+;; face.
+;;
+;; Following is an example of using this utility.
 
 ;; (eval-after-load "holidays"
 ;;   '(progn
@@ -43,22 +44,21 @@
 ;;            (append japanese-holidays local-holidays other-holidays))
 ;;      (setq mark-holidays-in-calendar t) ; 祝日をカレンダーに表示
 ;;      ;; 土曜日・日曜日を祝日として表示する場合、以下の設定を追加します。
-;;      ;; デフォルトで設定済み
+;;      ;; 変数はデフォルトで設定済み
 ;;      (setq japanese-holiday-weekend '(0 6)     ; 土日を祝日として表示
 ;;            japanese-holiday-weekend-marker     ; 土曜日を水色で表示
 ;;            '(holiday nil nil nil nil nil japanese-holiday-saturday))
 ;;      (add-hook 'calendar-today-visible-hook 'japanese-holiday-mark-weekend)
-;;      (add-hook 'calendar-today-invisible-hook 'japanese-holiday-mark-weekend)))
-
-;; “きょう”をマークするには以下の設定を追加します。
-;;  (add-hook 'calendar-today-visible-hook 'calendar-mark-today)
+;;      (add-hook 'calendar-today-invisible-hook 'japanese-holiday-mark-weekend)
+;;      ;; “きょう”をマークするには以下の設定を追加します。
+;;      (add-hook 'calendar-today-visible-hook 'calendar-mark-today)))
 
 ;;; Change Log:
 
 ;; Original program created by T. Hattori 1999/4/20
 ;;      http://www.meadowy.org/meadow/netinstall/export/799/branches/3.00/pkginfo/japanese-holidays/japanese-holidays.el
 ;;
-;; 9/1/2013
+;; 2013/9/1
 ;;	* 関数・変数名を "japanese-holiday-" prefix に統一
 ;;      * obosolete化された変数名を最新の名前に更新
 ;;      * 文字コードを UTF-8 に変更
@@ -191,7 +191,10 @@
        (japanese-holiday-range
 	(holiday-fixed 4 29 "昭和の日") '(1 1 2007))
        (japanese-holiday-range
-	(holiday-fixed 5 4 "みどりの日") '(1 1 2007)))))
+	(holiday-fixed 5 4 "みどりの日") '(1 1 2007))
+       ;; 国民の祝日に関する法律の一部を改正する法律 (平成26年法律第43号)
+       (japanese-holiday-range
+	(holiday-fixed 8 11 "山の日") '(1 1 2016)))))
     (holiday-filter-visible-calendar
      '(;; 皇太子明仁親王の結婚の儀の行われる日を休日とする法律 (昭和34年法律第16号)
        ((4 10 1959) "明仁親王の結婚の儀")
