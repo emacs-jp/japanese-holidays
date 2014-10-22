@@ -6,7 +6,7 @@
   '(progn
      (require 'japanese-holidays)
      (setq calendar-holidays ; 他の国の祝日も表示させたい場合は適当に調整
-           (append japanese-holidays local-holidays other-holidays))
+           (append japanese-holidays holiday-local-holidays holiday-other-holidays))
      (setq mark-holidays-in-calendar t) ; 祝日をカレンダーに表示
      ;; 土曜日・日曜日を祝日として表示する場合、以下の設定を追加します。
      ;; デフォルトで設定済み
