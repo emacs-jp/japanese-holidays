@@ -102,13 +102,13 @@
      (holiday-fixed 11 23 "新嘗祭") '(10 14 1873) '(7 20 1948))
     ;; 明治11年太政官布告23号
     (let* ((equinox (solar-equinoxes/solstices 0 displayed-year))
-	   (m (extract-calendar-month equinox))
-	   (d (truncate (extract-calendar-day equinox))))
+	   (m (calendar-extract-month equinox))
+	   (d (truncate (calendar-extract-day equinox))))
       (japanese-holiday-range
        (holiday-fixed m d "春季皇霊祭") '(6 5 1878) '(7 20 1948)))
     (let* ((equinox (solar-equinoxes/solstices 2 displayed-year))
-	   (m (extract-calendar-month equinox))
-	   (d (truncate (extract-calendar-day equinox))))
+	   (m (calendar-extract-month equinox))
+	   (d (truncate (calendar-extract-day equinox))))
       (japanese-holiday-range
        (holiday-fixed m d "秋季皇霊祭") '(6 5 1878) '(7 20 1948)))
     ;; 明治12年太政官布告27号
@@ -140,8 +140,8 @@
        (japanese-holiday-range
 	(holiday-fixed 1 15 "成人の日") '(7 20 1947) '(1 1 2000))
        (let* ((equinox (solar-equinoxes/solstices 0 displayed-year))
-	      (m (extract-calendar-month equinox))
-	      (d (truncate (extract-calendar-day equinox))))
+	      (m (calendar-extract-month equinox))
+	      (d (truncate (calendar-extract-day equinox))))
 	 ;; 春分の日は、厳密には前年2月の官報により決定される
 	 (japanese-holiday-range
 	  (holiday-fixed m d "春分の日") '(7 20 1948)))
@@ -152,8 +152,8 @@
        (japanese-holiday-range
 	(holiday-fixed 5 5 "こどもの日") '(7 20 1948))
        (let* ((equinox (solar-equinoxes/solstices 2 displayed-year))
-	      (m (extract-calendar-month equinox))
-	      (d (truncate (extract-calendar-day equinox))))
+	      (m (calendar-extract-month equinox))
+	      (d (truncate (calendar-extract-day equinox))))
 	 ;; 秋分の日は、厳密には前年2月の官報により決定される
 	 (japanese-holiday-range
 	  (holiday-fixed m d "秋分の日") '(7 20 1948)))
