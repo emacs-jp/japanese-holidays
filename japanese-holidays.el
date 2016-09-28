@@ -5,7 +5,7 @@
 ;; Author: Takashi Hattori <hattori@sfc.keio.ac.jp>
 ;;	Hiroya Murata <lapis-lazuli@pop06.odn.ne.jp>
 ;; Created: 1999-04-20
-;; Version: 1.140620
+;; Version: 1.160928
 ;; Keywords: calendar
 ;; Prefix: japanese-holiday-
 ;; URL: https://github.com/emacs-jp/japanese-holidays
