@@ -5,7 +5,7 @@
 ;; Author: Takashi Hattori <hattori@sfc.keio.ac.jp>
 ;;	Hiroya Murata <lapis-lazuli@pop06.odn.ne.jp>
 ;; Created: 1999-04-20
-;; Version: 1.160928
+;; Version: 1.190117
 ;; Keywords: calendar
 ;; Prefix: japanese-holiday-
 ;; URL: https://github.com/emacs-jp/japanese-holidays
@@ -203,7 +203,10 @@
        ;; 即位礼正殿の儀の行われる日を休日とする法律 (平成2年法律第24号)
        ((11 12 1990) "即位礼正殿の儀")
        ;; 皇太子徳仁親王の結婚の儀の行われる日を休日とする法律 (平成5年法律第32号)
-       ((6 9 1993) "徳仁親王の結婚の儀"))))
+       ((6 9 1993) "徳仁親王の結婚の儀")
+       ;; 天皇の即位の日及び即位礼正殿の儀の行われる日を休日とする法律 (平成30年法律第32号)
+       ((5 1 2019) "即位礼正殿の儀")
+       )))
   "*Japanese holidays.
 See the documentation for `calendar-holidays' for details."
   :type 'sexp
@@ -326,9 +329,9 @@ It can be face face, or list of faces for corresponding weekdays."
 		   curr (pop rest))
 	(when (= (japanese-holiday-subtract-date (car curr) (car prev)) 2)
 	  (let* ((date (japanese-holiday-add-days (car prev) 1))
-		 (sotable-date (japanese-holiday-make-sortable date)))
+		 (sortable-date (japanese-holiday-make-sortable date)))
 	    (when (cond
-		   ((>= sotable-date
+		   ((>= sortable-date
 			(eval-when-compile
 			  (japanese-holiday-make-sortable '(1 1 2007))))
 		    (catch 'found
@@ -338,7 +341,7 @@ It can be face face, or list of faces for corresponding weekdays."
 				 (cadr holiday))
 			  (throw 'found nil)))
 		      t))
-		   ((>= sotable-date
+		   ((>= sortable-date
 			(eval-when-compile
 			  (japanese-holiday-make-sortable '(12 27 1985))))
 		    (not (or (= (calendar-day-of-week date) 0)
