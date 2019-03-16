@@ -173,7 +173,7 @@
        (japanese-holiday-range
 	(holiday-fixed 4 29 "みどりの日") '(2 17 1989) '(1 1 2007))
        (japanese-holiday-range
-	(holiday-fixed 12 23 "天皇誕生日") '(2 17 1989))
+	(holiday-fixed 12 23 "天皇誕生日") '(2 17 1989) '(5 1 2019))
        ;; 国民の祝日に関する法律の一部を改正する法律 (平成7年法律第22号)
        (japanese-holiday-range
 	(holiday-fixed 7 20 "海の日") '(1 1 1996) '(1 1 2003))
@@ -195,6 +195,9 @@
        ;; 国民の祝日に関する法律の一部を改正する法律 (平成26年法律第43号)
        (japanese-holiday-range
 	(holiday-fixed 8 11 "山の日") '(1 1 2016))
+       ;; 天皇の退位等に関する皇室典範特例法 (平成29年法律第63号)
+       (japanese-holiday-range
+	(holiday-fixed 2 23 "天皇誕生日") '(5 1 2019))
        ;; 天皇の即位の日及び即位礼正殿の儀の行われる日を休日とする法律 (平成30年法律第99号)
        (japanese-holiday-range
 	(holiday-fixed 5 1 "即位の日") '(12 14 2018) '(1 1 2020))

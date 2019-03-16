@@ -23,3 +23,11 @@
     (should (not (calendar-check-holidays '(10 22 2018))))
     (should (equal (calendar-check-holidays '(10 22 2019)) '("即位礼正殿の儀")))
     (should (not (calendar-check-holidays '(10 22 2020))))))
+
+(ert-deftest japanese-holiday-test-emperor-birthday-change-at-2019 ()
+  "Check if 2018/12/23 and 2020/02/23 are \"天皇誕生日\"."
+  (let ((calendar-holidays japanese-holidays))
+    (should (equal (calendar-check-holidays '(12 23 2018)) '("天皇誕生日")))
+    (should (equal (calendar-check-holidays '(2 23 2020)) '("天皇誕生日")))
+    (should (not (calendar-check-holidays '(2 23 2019))))
+    (should (not (calendar-check-holidays '(12 23 2019))))))
