@@ -53,7 +53,7 @@
     (should (equal (calendar-check-holidays '(10 11 2021)) '("スポーツの日")))))
 
 (ert-deftest japanese-holiday-test-2020/08/10 ()
-  "Check if 2019/07/23 is \"山の日\", and not in other years."
+  "Check if 2019/08/10 is \"山の日\", and not in other years."
   (let ((calendar-holidays japanese-holidays))
     (should (not (calendar-check-holidays '(8 10 2019))))
     (should (equal (calendar-check-holidays '(8 11 2019)) '("山の日")))
