@@ -5,7 +5,7 @@
 ;; Author: Takashi Hattori <hattori@sfc.keio.ac.jp>
 ;;	Hiroya Murata <lapis-lazuli@pop06.odn.ne.jp>
 ;; Created: 1999-04-20
-;; Version: 1.190117
+;; Version: 1.190317
 ;; Keywords: calendar
 ;; Prefix: japanese-holiday-
 ;; URL: https://github.com/emacs-jp/japanese-holidays
@@ -181,10 +181,12 @@
        (japanese-holiday-range
 	(holiday-float 1 1 2 "成人の日") '(1 1 2000))
        (japanese-holiday-range
-	(holiday-float 10 1 2 "体育の日") '(1 1 2000))
+	(holiday-float 10 1 2 "体育の日") '(1 1 2000) '(1 1 2020))
        ;; 国民の祝日に関する法律及び老人福祉法の一部を改正する法律 (平成13年法律第59号)
        (japanese-holiday-range
-	(holiday-float 7 1 3 "海の日") '(1 1 2003))
+	(holiday-float 7 1 3 "海の日") '(1 1 2003) '(1 1 2020))
+       (japanese-holiday-range
+	(holiday-float 7 1 3 "海の日") '(1 1 2021))
        (japanese-holiday-range
 	(holiday-float 9 1 3 "敬老の日") '(1 1 2003))
        ;; 国民の祝日に関する法律の一部を改正する法律 (平成17年法律第43号)
@@ -194,7 +196,9 @@
 	(holiday-fixed 5 4 "みどりの日") '(1 1 2007))
        ;; 国民の祝日に関する法律の一部を改正する法律 (平成26年法律第43号)
        (japanese-holiday-range
-	(holiday-fixed 8 11 "山の日") '(1 1 2016))
+	(holiday-fixed 8 11 "山の日") '(1 1 2016) '(1 1 2020))
+       (japanese-holiday-range
+        (holiday-fixed 8 11 "山の日") '(1 1 2021))
        ;; 天皇の退位等に関する皇室典範特例法 (平成29年法律第63号)
        (japanese-holiday-range
 	(holiday-fixed 2 23 "天皇誕生日") '(5 1 2019))
@@ -202,7 +206,18 @@
        (japanese-holiday-range
 	(holiday-fixed 5 1 "即位の日") '(12 14 2018) '(1 1 2020))
        (japanese-holiday-range
-	(holiday-fixed 10 22 "即位礼正殿の儀") '(12 14 2018) '(1 1 2020)))))
+	(holiday-fixed 10 22 "即位礼正殿の儀") '(12 14 2018) '(1 1 2020))
+       ;; 平成三十二年東京オリンピック競技大会・東京パラリンピック競技大会特別措置法及び 平成三十一年ラグビーワールドカップ大会特別措置法の一部を改正する法律（平成30年法律第55号）
+       (japanese-holiday-range
+	(holiday-fixed 7 23 "海の日") '(1 1 2020) '(1 1 2021))
+       (japanese-holiday-range
+	(holiday-fixed 7 24 "スポーツの日") '(1 1 2020) '(1 1 2021))
+       (japanese-holiday-range
+	(holiday-fixed 8 10 "山の日") '(1 1 2020) '(1 1 2021))
+       ;; 国民の祝日に関する法律の一部を改正する法律（平成30年法律第57号）
+       (japanese-holiday-range
+        (holiday-float 10 1 2 "スポーツの日") '(1 1 2021))
+       )))
     (holiday-filter-visible-calendar
      '(;; 皇太子明仁親王の結婚の儀の行われる日を休日とする法律 (昭和34年法律第16号)
        ((4 10 1959) "明仁親王の結婚の儀")
