@@ -7,7 +7,6 @@
 ;; Created: 1999-04-20
 ;; Version: 1.190317
 ;; Keywords: calendar
-;; Prefix: japanese-holiday-
 ;; URL: https://github.com/emacs-jp/japanese-holidays
 ;; Package-Requires: ((emacs "24.1") (cl-lib "0.3"))
 
