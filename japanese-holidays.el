@@ -1,4 +1,4 @@
-;;; japanese-holidays.el --- calendar functions for the Japanese calendar -*- lexical-binding: t; -*-
+;;; japanese-holidays.el --- Calendar functions for the Japanese calendar -*- lexical-binding: t; -*-
 
 ;; Filename: japanese-holidays.el
 ;; Description: Calendar functions for the Japanese calendar
@@ -7,9 +7,8 @@
 ;; Created: 1999-04-20
 ;; Version: 1.190317
 ;; Keywords: calendar
-;; Prefix: japanese-holiday-
 ;; URL: https://github.com/emacs-jp/japanese-holidays
-;; Package-Requires: ((cl-lib "0.3"))
+;; Package-Requires: ((emacs "24.1") (cl-lib "0.3"))
 
 ;; Copyright (C) 1999 Takashi Hattori <hattori@sfc.keio.ac.jp>
 ;; Copyright (C) 2005 Hiroya Murata <lapis-lazuli@pop06.odn.ne.jp>
@@ -31,9 +30,9 @@
 
 ;;; Commentary:
 
-;; This utility defines Japanese holiday for calendar function. This
-;; also enables to display weekends or any weekday with preferred
-;; face.
+;; This utility defines Japanese holiday for calendar function.
+;; This also enables to display weekends or any weekday with
+;; preferred face.
 ;;
 ;; Following is an example of using this utility.
 
@@ -216,8 +215,7 @@
 	(holiday-fixed 8 10 "山の日") '(1 1 2020) '(1 1 2021))
        ;; 国民の祝日に関する法律の一部を改正する法律（平成30年法律第57号）
        (japanese-holiday-range
-        (holiday-float 10 1 2 "スポーツの日") '(1 1 2021))
-       )))
+        (holiday-float 10 1 2 "スポーツの日") '(1 1 2021)))))
     (holiday-filter-visible-calendar
      '(;; 皇太子明仁親王の結婚の儀の行われる日を休日とする法律 (昭和34年法律第16号)
        ((4 10 1959) "明仁親王の結婚の儀")
@@ -226,8 +224,7 @@
        ;; 即位礼正殿の儀の行われる日を休日とする法律 (平成2年法律第24号)
        ((11 12 1990) "即位礼正殿の儀")
        ;; 皇太子徳仁親王の結婚の儀の行われる日を休日とする法律 (平成5年法律第32号)
-       ((6 9 1993) "徳仁親王の結婚の儀")
-       )))
+       ((6 9 1993) "徳仁親王の結婚の儀"))))
   "*Japanese holidays.
 See the documentation for `calendar-holidays' for details."
   :type 'sexp
@@ -396,10 +393,4 @@ It can be face face, or list of faces for corresponding weekdays."
      (calendar-increment-month m y 1))))
 
 (provide 'japanese-holidays)
-
-;; Local Variables:
-;; coding: utf-8
-;; time-stamp-pattern: "10/Version:\\\\?[ \t]+1.%02y%02m%02d\\\\?\n"
-;; End:
-
 ;;; japanese-holidays.el ends here
