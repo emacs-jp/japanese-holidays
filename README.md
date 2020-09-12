@@ -49,3 +49,16 @@
   ```elisp
   (setq calendar-day-header-array ["日" "月" "火" "水" "木" "金" "土"])
   ```
+
+  - ポイントの移動先が祝日であれば、同時にエコーエリアに表示する。
+
+  ```elisp
+  (defun my/japanese-holiday-show (&rest _args)
+    (let* ((date (calendar-cursor-to-date t))
+           (date-string (calendar-date-string date))
+           (holiday-list (calendar-check-holidays date)))
+    (when holiday-list
+      (message "%s: %s" date-string (mapconcat #'identity holiday-list "; ")))))
+
+  (add-hook 'calendar-move-hook 'my/japanese-holiday-show)
+  ```
