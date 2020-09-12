@@ -1,6 +1,6 @@
 # japanese-holidays.el
 
-このプログラムは、Emacs の [calendar](https://www.gnu.org/software/emacs/manual/html_node/emacs/Calendar_002fDiary.html) に、本の祝日を表示できるように設定するものです。
+このプログラムは、Emacs の [calendar](https://www.gnu.org/software/emacs/manual/html_node/emacs/Calendar_002fDiary.html) に、日本の祝日を表示できるように設定するものです。
 
 <kbd>M-x calendar</kbd> で起動します。
 
