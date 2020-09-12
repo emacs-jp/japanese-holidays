@@ -31,9 +31,9 @@
 
 ;;; Commentary:
 
-;; This utility defines Japanese holiday for calendar function. This
-;; also enables to display weekends or any weekday with preferred
-;; face.
+;; This utility defines Japanese holiday for calendar function.
+;; This also enables to display weekends or any weekday with
+;; preferred face.
 ;;
 ;; Following is an example of using this utility.
 
