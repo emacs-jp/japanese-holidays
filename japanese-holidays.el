@@ -9,7 +9,7 @@
 ;; Keywords: calendar
 ;; Prefix: japanese-holiday-
 ;; URL: https://github.com/emacs-jp/japanese-holidays
-;; Package-Requires: ((cl-lib "0.3"))
+;; Package-Requires: ((emacs "24.1") (cl-lib "0.3"))
 
 ;; Copyright (C) 1999 Takashi Hattori <hattori@sfc.keio.ac.jp>
 ;; Copyright (C) 2005 Hiroya Murata <lapis-lazuli@pop06.odn.ne.jp>
