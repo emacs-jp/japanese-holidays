@@ -55,8 +55,8 @@
   ```elisp
   (defun my/japanese-holiday-show (&rest _args)
     (let* ((date (calendar-cursor-to-date t))
-      (date-string (calendar-date-string date))
-        (holiday-list (calendar-check-holidays date)))
+           (date-string (calendar-date-string date))
+           (holiday-list (calendar-check-holidays date)))
     (when holiday-list
       (message "%s: %s" date-string (mapconcat #'identity holiday-list "; ")))))
 
