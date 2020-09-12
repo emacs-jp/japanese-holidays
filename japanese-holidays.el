@@ -1,4 +1,4 @@
-;;; japanese-holidays.el --- calendar functions for the Japanese calendar -*- lexical-binding: t; -*-
+;;; japanese-holidays.el --- Calendar functions for the Japanese calendar -*- lexical-binding: t; -*-
 
 ;; Filename: japanese-holidays.el
 ;; Description: Calendar functions for the Japanese calendar
