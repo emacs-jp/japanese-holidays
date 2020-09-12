@@ -4,7 +4,7 @@
 
 <kbd>M-x calendar</kbd> で起動します。
 
-![japanese-holidays.jpg](https://raw.githubusercontent.com/tkita/japanese-holidays/screenshot/japanese-holidays.jpg)
+![japanese-holidays.jpg](japanese-holidays.jpg)
 
 ## Getting Started
 
