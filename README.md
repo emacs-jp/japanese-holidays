@@ -1,6 +1,15 @@
-このプログラムは、[calendar](https://www.gnu.org/software/emacs/manual/html_node/emacs/Calendar_002fDiary.html) で表示出来る様に日本の祝日を設定します。
-使用するには、このファイルを load-path の通った所に置き、
-~/.emacs.d/init.el に以下の設定を追加します。
+# japanese-holidays.el
+
+このプログラムは、Emacs の [calendar](https://www.gnu.org/software/emacs/manual/html_node/emacs/Calendar_002fDiary.html) に、本の祝日を表示できるように設定するものです。
+
+<kbd>M-x calendar</kbd> で起動します。
+
+![japanese-holidays.jpg](japanese-holidays.jpg)
+
+## Getting Started
+
+使用するには `japanese-holidays.el` を `load-path` の通った所に置き、
+`~/.emacs.d/init.el` に以下の設定を追加します。
 
 ```elisp
 (with-eval-after-load "holidays"
@@ -17,24 +26,26 @@
   (add-hook 'calendar-today-invisible-hook 'japanese-holiday-mark-weekend))
 ```
 
-“きょう”をマークするには以下の設定を追加します。
+## 便利な設定
 
-```elisp
-(add-hook 'calendar-today-visible-hook 'calendar-mark-today)
-```
+  - “きょう” をマークするには、次の設定を追加します。
 
-の表記を日本の書式とするには以下の設定を追加します。
+  ```elisp
+  (add-hook 'calendar-today-visible-hook 'calendar-mark-today)
+  ```
 
-```elisp
-(setq calendar-month-name-array ["1月" "2月" "3月"  "4月"  "5月"  "6月"
-                                 "7月" "8月" "9月" "10月" "11月" "12月"]
-      calendar-month-header '(propertize
-                              (format "%d年 %s" year (calendar-month-name month))
-                              'font-lock-face 'calendar-month-header))
-```
+  - "月" の表記を日本の書式とするには、次の設定を追加します。
 
-曜日の表記を日本の書式とするには以下の設定を追加します。
+  ```elisp
+  (setq calendar-month-name-array ["1月" "2月" "3月"  "4月"  "5月"  "6月"
+                                   "7月" "8月" "9月" "10月" "11月" "12月"]
+        calendar-month-header '(propertize
+                                (format "%d年 %s" year (calendar-month-name month))
+                                'font-lock-face 'calendar-month-header))
+  ```
 
-```elisp
-(setq calendar-day-header-array ["日" "月" "火" "水" "木" "金" "土"])
-```
+  - 曜日の表記を日本の書式とするには、次の設定を追加します。
+
+  ```elisp
+  (setq calendar-day-header-array ["日" "月" "火" "水" "木" "金" "土"])
+  ```
