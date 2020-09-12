@@ -394,10 +394,4 @@ It can be face face, or list of faces for corresponding weekdays."
      (calendar-increment-month m y 1))))
 
 (provide 'japanese-holidays)
-
-;; Local Variables:
-;; coding: utf-8
-;; time-stamp-pattern: "10/Version:\\\\?[ \t]+1.%02y%02m%02d\\\\?\n"
-;; End:
-
 ;;; japanese-holidays.el ends here
