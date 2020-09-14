@@ -1,4 +1,4 @@
-# japanese-holidays.el
+# japanese-holidays.el ![](https://github.com/emacs-jp/japanese-holidays/workflows/CI/badge.svg)
 
 このプログラムは、Emacs の [calendar](https://www.gnu.org/software/emacs/manual/html_node/emacs/Calendar_002fDiary.html) に、日本の祝日を表示できるように設定するものです。
 
