@@ -1,0 +1,28 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    paths-ignore:
+    - '**.md'
+    - '**.jpg'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        emacs_version:
+          - 25.1
+          - 26.1
+          - 26.2
+          - 26.3
+          - 27.1
+          - 'snapshot'
+    steps:
+      - uses: actions/checkout@v1
+      - uses: purcell/setup-emacs@master
+        with:
+          version: ${{ matrix.emacs_version }}
+      - name: Run tests
+        run: make test
