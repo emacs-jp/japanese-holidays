@@ -37,24 +37,25 @@
   - "月" の表記を日本の書式とするには、次の設定を追加します。
 
   ```elisp
-  (setq calendar-month-name-array ["1月" "2月" "3月"  "4月"  "5月"  "6月"
-                                   "7月" "8月" "9月" "10月" "11月" "12月"]
-        calendar-month-header '(propertize
-                                (format "%d年 %s" year (calendar-month-name month))
+  (setq calendar-month-header '(propertize
+                                (format "%d年 %s月" year month)
                                 'font-lock-face 'calendar-month-header))
   ```
 
   - 曜日の表記を日本の書式とするには、次の設定を追加します。
 
   ```elisp
-  (setq calendar-day-header-array ["日" "月" "火" "水" "木" "金" "土"])
+  (let ((array ["日" "月" "火" "水" "木" "金" "土"]))
+    (setq calendar-day-header-array array
+          calendar-day-name-array array))
   ```
 
-  - ポイントの移動先が祝日であれば、同時にエコーエリアに表示する。
+  - ポイントの移動先が祝日であれば、同時にエコーエリアに表示してみます。
 
   ```elisp
   (defun my/japanese-holiday-show (&rest _args)
     (let* ((date (calendar-cursor-to-date t))
+           (calendar-date-display-form '((format "%s年 %s月 %s日（%s）" year month day dayname)))
            (date-string (calendar-date-string date))
            (holiday-list (calendar-check-holidays date)))
     (when holiday-list
