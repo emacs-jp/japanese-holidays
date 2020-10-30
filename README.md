@@ -12,11 +12,11 @@
 `~/.emacs.d/init.el` に以下の設定を追加します。
 
 ```elisp
-(setq calendar-mark-holidays-flag t)	; 祝日をカレンダーに表示
 (with-eval-after-load "holidays"
   (require 'japanese-holidays)
   (setq calendar-holidays ; 他の国の祝日も表示させたい場合は適当に調整
         (append japanese-holidays holiday-local-holidays holiday-other-holidays))
+  (setq calendar-mark-holidays-flag t)	; 祝日をカレンダーに表示
   ;; 土曜日・日曜日を祝日として表示する場合、以下の設定を追加します。
   ;; デフォルトで設定済み
   (setq japanese-holiday-weekend '(0 6)	   ; 土日を祝日として表示
