@@ -12,7 +12,7 @@
 `~/.emacs.d/init.el` に以下の設定を追加します。
 
 ```elisp
-(with-eval-after-load "holidays"
+(with-eval-after-load "calendar"
   (require 'japanese-holidays)
   (setq calendar-holidays ; 他の国の祝日も表示させたい場合は適当に調整
         (append japanese-holidays holiday-local-holidays holiday-other-holidays))
