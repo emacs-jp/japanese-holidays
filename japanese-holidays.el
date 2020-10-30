@@ -36,7 +36,7 @@
 ;;
 ;; Following is an example of using this utility.
 
-;; (eval-after-load "holidays"
+;; (eval-after-load "calendar"
 ;;   '(progn
 ;;      (require 'japanese-holidays)
 ;;      (setq calendar-holidays ; 他の国の祝日も表示させたい場合は適当に調整
