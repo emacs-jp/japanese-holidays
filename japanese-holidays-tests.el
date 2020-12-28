@@ -39,8 +39,8 @@
     (should (equal (calendar-check-holidays '(7 15 2019)) '("海の日")))
     (should (not (calendar-check-holidays '(7 20 2020))))
     (should (equal (calendar-check-holidays '(7 23 2020)) '("海の日")))
-    (should (not (calendar-check-holidays '(7 23 2021))))
-    (should (equal (calendar-check-holidays '(7 19 2021)) '("海の日")))))
+    (should (not (calendar-check-holidays '(7 19 2021))))
+    (should (equal (calendar-check-holidays '(7 22 2021)) '("海の日")))))
 
 (ert-deftest japanese-holiday-test-2020/07/24 ()
   "Check if 2020/07/24 is \"スポーツの日\", and not in other years."
@@ -49,8 +49,8 @@
     (should (equal (calendar-check-holidays '(10 14 2019)) '("体育の日")))
     (should (not (calendar-check-holidays '(10 12 2020))))
     (should (equal (calendar-check-holidays '(7 24 2020)) '("スポーツの日")))
-    (should (not (calendar-check-holidays '(7 24 2021))))
-    (should (equal (calendar-check-holidays '(10 11 2021)) '("スポーツの日")))))
+    (should (not (calendar-check-holidays '(10 11 2021))))
+    (should (equal (calendar-check-holidays '(7 23 2021)) '("スポーツの日")))))
 
 (ert-deftest japanese-holiday-test-2020/08/10 ()
   "Check if 2020/08/10 is \"山の日\", and not in other years."
@@ -59,5 +59,5 @@
     (should (equal (calendar-check-holidays '(8 11 2019)) '("山の日")))
     (should (not (calendar-check-holidays '(8 11 2020))))
     (should (equal (calendar-check-holidays '(8 10 2020)) '("山の日")))
-    (should (not (calendar-check-holidays '(8 10 2021))))
-    (should (equal (calendar-check-holidays '(8 11 2021)) '("山の日")))))
+    (should (not (calendar-check-holidays '(8 11 2021))))
+    (should (equal (calendar-check-holidays '(8 8 2021)) '("山の日")))))
