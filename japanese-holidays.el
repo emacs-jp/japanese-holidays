@@ -401,3 +401,7 @@ It can be face face, or list of faces for corresponding weekdays."
 
 (provide 'japanese-holidays)
 ;;; japanese-holidays.el ends here
+
+;; Local Variables:
+;; tab-width: 8
+;; End:
