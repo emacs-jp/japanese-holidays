@@ -128,101 +128,102 @@
      (holiday-fixed 11 3 "明治節") '(3 3 1927) '(7 20 1948))
     (japanese-holiday-range
      (holiday-fixed 12 25 "大正天皇祭") '(3 3 1927) '(7 20 1948))
-    ;; 国民の祝日に関する法律の一部を改正する法律 (昭和60年法律第103号)
-    (japanese-holiday-national
-     ;; 国民の祝日に関する法律の一部を改正する法律 (昭和48年法律第10号)
-     (japanese-holiday-substitute
-      (nconc
-       ;; 国民の祝日に関する法律 (昭和23年法律第178号)
-       (japanese-holiday-range
-	(holiday-fixed 1 1 "元日") '(7 20 1948))
-       (japanese-holiday-range
-	(holiday-fixed 1 15 "成人の日") '(7 20 1947) '(1 1 2000))
-       (let* ((equinox (solar-equinoxes/solstices 0 displayed-year))
-	      (m (calendar-extract-month equinox))
-	      (d (truncate (calendar-extract-day equinox))))
-	 ;; 春分の日は、厳密には前年2月の官報により決定される
-	 (japanese-holiday-range
-	  (holiday-fixed m d "春分の日") '(7 20 1948)))
-       (japanese-holiday-range
-	(holiday-fixed 4 29 "天皇誕生日") '(7 20 1948) '(2 17 1989))
-       (japanese-holiday-range
-	(holiday-fixed 5 3 "憲法記念日") '(7 20 1948))
-       (japanese-holiday-range
-	(holiday-fixed 5 5 "こどもの日") '(7 20 1948))
-       (let* ((equinox (solar-equinoxes/solstices 2 displayed-year))
-	      (m (calendar-extract-month equinox))
-	      (d (truncate (calendar-extract-day equinox))))
-	 ;; 秋分の日は、厳密には前年2月の官報により決定される
-	 (japanese-holiday-range
-	  (holiday-fixed m d "秋分の日") '(7 20 1948)))
-       (japanese-holiday-range
-	(holiday-fixed 11 3 "文化の日") '(7 20 1948))
-       (japanese-holiday-range
-	(holiday-fixed 11 23 "勤労感謝の日") '(7 20 1948))
-       ;; 国民の祝日に関する法律の一部を改正する法律 (昭和41年法律第86号)
-       ;;   建国記念の日となる日を定める政令 (昭和41年政令第376号)
-       (japanese-holiday-range
-	(holiday-fixed 2 11 "建国記念の日") '(6 25 1966))
-       (japanese-holiday-range
-	(holiday-fixed 9 15 "敬老の日") '(6 25 1966) '(1 1 2003))
-       (japanese-holiday-range
-	(holiday-fixed 10 10 "体育の日") '(6 25 1966) '(1 1 2000))
-       ;; 国民の祝日に関する法律の一部を改正する法律 (平成元年法律第5号)
-       (japanese-holiday-range
-	(holiday-fixed 4 29 "みどりの日") '(2 17 1989) '(1 1 2007))
-       (japanese-holiday-range
-	(holiday-fixed 12 23 "天皇誕生日") '(2 17 1989) '(5 1 2019))
-       ;; 国民の祝日に関する法律の一部を改正する法律 (平成7年法律第22号)
-       (japanese-holiday-range
-	(holiday-fixed 7 20 "海の日") '(1 1 1996) '(1 1 2003))
-       ;; 国民の祝日に関する法律の一部を改正する法律 (平成10年法律第141号)
-       (japanese-holiday-range
-	(holiday-float 1 1 2 "成人の日") '(1 1 2000))
-       (japanese-holiday-range
-	(holiday-float 10 1 2 "体育の日") '(1 1 2000) '(1 1 2020))
-       ;; 国民の祝日に関する法律及び老人福祉法の一部を改正する法律 (平成13年法律第59号)
-       (japanese-holiday-range
-	(holiday-float 7 1 3 "海の日") '(1 1 2003) '(1 1 2020))
-       (japanese-holiday-range
-	(holiday-float 7 1 3 "海の日") '(1 1 2022))
-       (japanese-holiday-range
-	(holiday-float 9 1 3 "敬老の日") '(1 1 2003))
-       ;; 国民の祝日に関する法律の一部を改正する法律 (平成17年法律第43号)
-       (japanese-holiday-range
-	(holiday-fixed 4 29 "昭和の日") '(1 1 2007))
-       (japanese-holiday-range
-	(holiday-fixed 5 4 "みどりの日") '(1 1 2007))
-       ;; 国民の祝日に関する法律の一部を改正する法律 (平成26年法律第43号)
-       (japanese-holiday-range
-	(holiday-fixed 8 11 "山の日") '(1 1 2016) '(1 1 2020))
-       (japanese-holiday-range
-        (holiday-fixed 8 11 "山の日") '(1 1 2022))
-       ;; 天皇の退位等に関する皇室典範特例法 (平成29年法律第63号)
-       (japanese-holiday-range
-	(holiday-fixed 2 23 "天皇誕生日") '(5 1 2019))
-       ;; 天皇の即位の日及び即位礼正殿の儀の行われる日を休日とする法律 (平成30年法律第99号)
-       (japanese-holiday-range
-	(holiday-fixed 5 1 "即位の日") '(12 14 2018) '(1 1 2020))
-       (japanese-holiday-range
-	(holiday-fixed 10 22 "即位礼正殿の儀") '(12 14 2018) '(1 1 2020))
-       ;; 平成三十二年東京オリンピック競技大会・東京パラリンピック競技大会特別措置法及び 平成三十一年ラグビーワールドカップ大会特別措置法の一部を改正する法律（平成30年法律第55号）
-       (japanese-holiday-range
-	(holiday-fixed 7 23 "海の日") '(1 1 2020) '(1 1 2021))
-       (japanese-holiday-range
-	(holiday-fixed 7 24 "スポーツの日") '(1 1 2020) '(1 1 2021))
-       (japanese-holiday-range
-	(holiday-fixed 8 10 "山の日") '(1 1 2020) '(1 1 2021))
-       ;; 国民の祝日に関する法律の一部を改正する法律（平成30年法律第57号）
-       (japanese-holiday-range
-        (holiday-float 10 1 2 "スポーツの日") '(1 1 2022))
-       ;; 東京オリンピック競技大会・東京パラリンピック競技大会特別措置法等の一部を改正する法律(令和2年法律第68号)
-       (japanese-holiday-range
-	(holiday-fixed 7 22 "海の日") '(1 1 2021) '(1 1 2022))
-       (japanese-holiday-range
-	(holiday-fixed 7 23 "スポーツの日") '(1 1 2021) '(1 1 2022))
-       (japanese-holiday-range
-	(holiday-fixed 8 8 "山の日") '(1 1 2021) '(1 1 2022)))))
+    (let ((calendar-total-months (max 3 calendar-total-months)))
+      ;; 国民の祝日に関する法律の一部を改正する法律 (昭和60年法律第103号)
+      (japanese-holiday-national
+       ;; 国民の祝日に関する法律の一部を改正する法律 (昭和48年法律第10号)
+       (japanese-holiday-substitute
+        (nconc
+         ;; 国民の祝日に関する法律 (昭和23年法律第178号)
+         (japanese-holiday-range
+	  (holiday-fixed 1 1 "元日") '(7 20 1948))
+         (japanese-holiday-range
+	  (holiday-fixed 1 15 "成人の日") '(7 20 1947) '(1 1 2000))
+         (let* ((equinox (solar-equinoxes/solstices 0 displayed-year))
+	        (m (calendar-extract-month equinox))
+	        (d (truncate (calendar-extract-day equinox))))
+	   ;; 春分の日は、厳密には前年2月の官報により決定される
+	   (japanese-holiday-range
+	    (holiday-fixed m d "春分の日") '(7 20 1948)))
+         (japanese-holiday-range
+	  (holiday-fixed 4 29 "天皇誕生日") '(7 20 1948) '(2 17 1989))
+         (japanese-holiday-range
+	  (holiday-fixed 5 3 "憲法記念日") '(7 20 1948))
+         (japanese-holiday-range
+	  (holiday-fixed 5 5 "こどもの日") '(7 20 1948))
+         (let* ((equinox (solar-equinoxes/solstices 2 displayed-year))
+	        (m (calendar-extract-month equinox))
+	        (d (truncate (calendar-extract-day equinox))))
+	   ;; 秋分の日は、厳密には前年2月の官報により決定される
+	   (japanese-holiday-range
+	    (holiday-fixed m d "秋分の日") '(7 20 1948)))
+         (japanese-holiday-range
+	  (holiday-fixed 11 3 "文化の日") '(7 20 1948))
+         (japanese-holiday-range
+	  (holiday-fixed 11 23 "勤労感謝の日") '(7 20 1948))
+         ;; 国民の祝日に関する法律の一部を改正する法律 (昭和41年法律第86号)
+         ;;   建国記念の日となる日を定める政令 (昭和41年政令第376号)
+         (japanese-holiday-range
+	  (holiday-fixed 2 11 "建国記念の日") '(6 25 1966))
+         (japanese-holiday-range
+	  (holiday-fixed 9 15 "敬老の日") '(6 25 1966) '(1 1 2003))
+         (japanese-holiday-range
+	  (holiday-fixed 10 10 "体育の日") '(6 25 1966) '(1 1 2000))
+         ;; 国民の祝日に関する法律の一部を改正する法律 (平成元年法律第5号)
+         (japanese-holiday-range
+	  (holiday-fixed 4 29 "みどりの日") '(2 17 1989) '(1 1 2007))
+         (japanese-holiday-range
+	  (holiday-fixed 12 23 "天皇誕生日") '(2 17 1989) '(5 1 2019))
+         ;; 国民の祝日に関する法律の一部を改正する法律 (平成7年法律第22号)
+         (japanese-holiday-range
+	  (holiday-fixed 7 20 "海の日") '(1 1 1996) '(1 1 2003))
+         ;; 国民の祝日に関する法律の一部を改正する法律 (平成10年法律第141号)
+         (japanese-holiday-range
+	  (holiday-float 1 1 2 "成人の日") '(1 1 2000))
+         (japanese-holiday-range
+	  (holiday-float 10 1 2 "体育の日") '(1 1 2000) '(1 1 2020))
+         ;; 国民の祝日に関する法律及び老人福祉法の一部を改正する法律 (平成13年法律第59号)
+         (japanese-holiday-range
+	  (holiday-float 7 1 3 "海の日") '(1 1 2003) '(1 1 2020))
+         (japanese-holiday-range
+	  (holiday-float 7 1 3 "海の日") '(1 1 2022))
+         (japanese-holiday-range
+	  (holiday-float 9 1 3 "敬老の日") '(1 1 2003))
+         ;; 国民の祝日に関する法律の一部を改正する法律 (平成17年法律第43号)
+         (japanese-holiday-range
+	  (holiday-fixed 4 29 "昭和の日") '(1 1 2007))
+         (japanese-holiday-range
+	  (holiday-fixed 5 4 "みどりの日") '(1 1 2007))
+         ;; 国民の祝日に関する法律の一部を改正する法律 (平成26年法律第43号)
+         (japanese-holiday-range
+	  (holiday-fixed 8 11 "山の日") '(1 1 2016) '(1 1 2020))
+         (japanese-holiday-range
+          (holiday-fixed 8 11 "山の日") '(1 1 2022))
+         ;; 天皇の退位等に関する皇室典範特例法 (平成29年法律第63号)
+         (japanese-holiday-range
+	  (holiday-fixed 2 23 "天皇誕生日") '(5 1 2019))
+         ;; 天皇の即位の日及び即位礼正殿の儀の行われる日を休日とする法律 (平成30年法律第99号)
+         (japanese-holiday-range
+	  (holiday-fixed 5 1 "即位の日") '(12 14 2018) '(1 1 2020))
+         (japanese-holiday-range
+	  (holiday-fixed 10 22 "即位礼正殿の儀") '(12 14 2018) '(1 1 2020))
+         ;; 平成三十二年東京オリンピック競技大会・東京パラリンピック競技大会特別措置法及び 平成三十一年ラグビーワールドカップ大会特別措置法の一部を改正する法律（平成30年法律第55号）
+         (japanese-holiday-range
+	  (holiday-fixed 7 23 "海の日") '(1 1 2020) '(1 1 2021))
+         (japanese-holiday-range
+	  (holiday-fixed 7 24 "スポーツの日") '(1 1 2020) '(1 1 2021))
+         (japanese-holiday-range
+	  (holiday-fixed 8 10 "山の日") '(1 1 2020) '(1 1 2021))
+         ;; 国民の祝日に関する法律の一部を改正する法律（平成30年法律第57号）
+         (japanese-holiday-range
+          (holiday-float 10 1 2 "スポーツの日") '(1 1 2022))
+         ;; 東京オリンピック競技大会・東京パラリンピック競技大会特別措置法等の一部を改正する法律(令和2年法律第68号)
+         (japanese-holiday-range
+	  (holiday-fixed 7 22 "海の日") '(1 1 2021) '(1 1 2022))
+         (japanese-holiday-range
+	  (holiday-fixed 7 23 "スポーツの日") '(1 1 2021) '(1 1 2022))
+         (japanese-holiday-range
+	  (holiday-fixed 8 8 "山の日") '(1 1 2021) '(1 1 2022))))))
     (holiday-filter-visible-calendar
      '(;; 皇太子明仁親王の結婚の儀の行われる日を休日とする法律 (昭和34年法律第16号)
        ((4 10 1959) "明仁親王の結婚の儀")
