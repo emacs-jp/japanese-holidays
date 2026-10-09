@@ -3,7 +3,7 @@
 ;; Filename: japanese-holidays.el
 ;; Description: Calendar functions for the Japanese calendar
 ;; Author: Takashi Hattori <hattori@sfc.keio.ac.jp>
-;;	Hiroya Murata <lapis-lazuli@pop06.odn.ne.jp>
+;;      Hiroya Murata <lapis-lazuli@pop06.odn.ne.jp>
 ;; Created: 1999-04-20
 ;; Version: 1.190317
 ;; Keywords: calendar
@@ -58,7 +58,7 @@
 ;;      http://www.meadowy.org/meadow/netinstall/export/799/branches/3.00/pkginfo/japanese-holidays/japanese-holidays.el
 ;;
 ;; 2013/9/1
-;;	* 関数・変数名を "japanese-holiday-" prefix に統一
+;;      * 関数・変数名を "japanese-holiday-" prefix に統一
 ;;      * obosolete化された変数名を最新の名前に更新
 ;;      * 文字コードを UTF-8 に変更
 ;;      * 土曜日・日曜日で異なるfaceを設定できるように変更
@@ -101,13 +101,13 @@
      (holiday-fixed 11 23 "新嘗祭") '(10 14 1873) '(7 20 1948))
     ;; 明治11年太政官布告23号
     (let* ((equinox (solar-equinoxes/solstices 0 displayed-year))
-	   (m (calendar-extract-month equinox))
-	   (d (truncate (calendar-extract-day equinox))))
+           (m (calendar-extract-month equinox))
+           (d (truncate (calendar-extract-day equinox))))
       (japanese-holiday-range
        (holiday-fixed m d "春季皇霊祭") '(6 5 1878) '(7 20 1948)))
     (let* ((equinox (solar-equinoxes/solstices 2 displayed-year))
-	   (m (calendar-extract-month equinox))
-	   (d (truncate (calendar-extract-day equinox))))
+           (m (calendar-extract-month equinox))
+           (d (truncate (calendar-extract-day equinox))))
       (japanese-holiday-range
        (holiday-fixed m d "秋季皇霊祭") '(6 5 1878) '(7 20 1948)))
     ;; 明治12年太政官布告27号
@@ -130,7 +130,7 @@
      (holiday-fixed 12 25 "大正天皇祭") '(3 3 1927) '(7 20 1948))
     ;; calendar-total-months is introduced since Emacs 31
     (let ((calendar-total-months (when (bound-and-true-p calendar-total-months)
-				   (max 3 calendar-total-months))))
+                                   (max 3 calendar-total-months))))
       ;; 国民の祝日に関する法律の一部を改正する法律 (昭和60年法律第103号)
       (japanese-holiday-national
        ;; 国民の祝日に関する法律の一部を改正する法律 (昭和48年法律第10号)
@@ -138,94 +138,94 @@
         (nconc
          ;; 国民の祝日に関する法律 (昭和23年法律第178号)
          (japanese-holiday-range
-	  (holiday-fixed 1 1 "元日") '(7 20 1948))
+          (holiday-fixed 1 1 "元日") '(7 20 1948))
          (japanese-holiday-range
-	  (holiday-fixed 1 15 "成人の日") '(7 20 1947) '(1 1 2000))
+          (holiday-fixed 1 15 "成人の日") '(7 20 1947) '(1 1 2000))
          (let* ((equinox (solar-equinoxes/solstices 0 displayed-year))
-	        (m (calendar-extract-month equinox))
-	        (d (truncate (calendar-extract-day equinox))))
-	   ;; 春分の日は、厳密には前年2月の官報により決定される
-	   (japanese-holiday-range
-	    (holiday-fixed m d "春分の日") '(7 20 1948)))
+                (m (calendar-extract-month equinox))
+                (d (truncate (calendar-extract-day equinox))))
+           ;; 春分の日は、厳密には前年2月の官報により決定される
+           (japanese-holiday-range
+            (holiday-fixed m d "春分の日") '(7 20 1948)))
          (japanese-holiday-range
-	  (holiday-fixed 4 29 "天皇誕生日") '(7 20 1948) '(2 17 1989))
+          (holiday-fixed 4 29 "天皇誕生日") '(7 20 1948) '(2 17 1989))
          (japanese-holiday-range
-	  (holiday-fixed 5 3 "憲法記念日") '(7 20 1948))
+          (holiday-fixed 5 3 "憲法記念日") '(7 20 1948))
          (japanese-holiday-range
-	  (holiday-fixed 5 5 "こどもの日") '(7 20 1948))
+          (holiday-fixed 5 5 "こどもの日") '(7 20 1948))
          (let* ((equinox (solar-equinoxes/solstices 2 displayed-year))
-	        (m (calendar-extract-month equinox))
-	        (d (truncate (calendar-extract-day equinox))))
-	   ;; 秋分の日は、厳密には前年2月の官報により決定される
-	   (japanese-holiday-range
-	    (holiday-fixed m d "秋分の日") '(7 20 1948)))
+                (m (calendar-extract-month equinox))
+                (d (truncate (calendar-extract-day equinox))))
+           ;; 秋分の日は、厳密には前年2月の官報により決定される
+           (japanese-holiday-range
+            (holiday-fixed m d "秋分の日") '(7 20 1948)))
          (japanese-holiday-range
-	  (holiday-fixed 11 3 "文化の日") '(7 20 1948))
+          (holiday-fixed 11 3 "文化の日") '(7 20 1948))
          (japanese-holiday-range
-	  (holiday-fixed 11 23 "勤労感謝の日") '(7 20 1948))
+          (holiday-fixed 11 23 "勤労感謝の日") '(7 20 1948))
          ;; 国民の祝日に関する法律の一部を改正する法律 (昭和41年法律第86号)
          ;;   建国記念の日となる日を定める政令 (昭和41年政令第376号)
          (japanese-holiday-range
-	  (holiday-fixed 2 11 "建国記念の日") '(6 25 1966))
+          (holiday-fixed 2 11 "建国記念の日") '(6 25 1966))
          (japanese-holiday-range
-	  (holiday-fixed 9 15 "敬老の日") '(6 25 1966) '(1 1 2003))
+          (holiday-fixed 9 15 "敬老の日") '(6 25 1966) '(1 1 2003))
          (japanese-holiday-range
-	  (holiday-fixed 10 10 "体育の日") '(6 25 1966) '(1 1 2000))
+          (holiday-fixed 10 10 "体育の日") '(6 25 1966) '(1 1 2000))
          ;; 国民の祝日に関する法律の一部を改正する法律 (平成元年法律第5号)
          (japanese-holiday-range
-	  (holiday-fixed 4 29 "みどりの日") '(2 17 1989) '(1 1 2007))
+          (holiday-fixed 4 29 "みどりの日") '(2 17 1989) '(1 1 2007))
          (japanese-holiday-range
-	  (holiday-fixed 12 23 "天皇誕生日") '(2 17 1989) '(5 1 2019))
+          (holiday-fixed 12 23 "天皇誕生日") '(2 17 1989) '(5 1 2019))
          ;; 国民の祝日に関する法律の一部を改正する法律 (平成7年法律第22号)
          (japanese-holiday-range
-	  (holiday-fixed 7 20 "海の日") '(1 1 1996) '(1 1 2003))
+          (holiday-fixed 7 20 "海の日") '(1 1 1996) '(1 1 2003))
          ;; 国民の祝日に関する法律の一部を改正する法律 (平成10年法律第141号)
          (japanese-holiday-range
-	  (holiday-float 1 1 2 "成人の日") '(1 1 2000))
+          (holiday-float 1 1 2 "成人の日") '(1 1 2000))
          (japanese-holiday-range
-	  (holiday-float 10 1 2 "体育の日") '(1 1 2000) '(1 1 2020))
+          (holiday-float 10 1 2 "体育の日") '(1 1 2000) '(1 1 2020))
          ;; 国民の祝日に関する法律及び老人福祉法の一部を改正する法律 (平成13年法律第59号)
          (japanese-holiday-range
-	  (holiday-float 7 1 3 "海の日") '(1 1 2003) '(1 1 2020))
+          (holiday-float 7 1 3 "海の日") '(1 1 2003) '(1 1 2020))
          (japanese-holiday-range
-	  (holiday-float 7 1 3 "海の日") '(1 1 2022))
+          (holiday-float 7 1 3 "海の日") '(1 1 2022))
          (japanese-holiday-range
-	  (holiday-float 9 1 3 "敬老の日") '(1 1 2003))
+          (holiday-float 9 1 3 "敬老の日") '(1 1 2003))
          ;; 国民の祝日に関する法律の一部を改正する法律 (平成17年法律第43号)
          (japanese-holiday-range
-	  (holiday-fixed 4 29 "昭和の日") '(1 1 2007))
+          (holiday-fixed 4 29 "昭和の日") '(1 1 2007))
          (japanese-holiday-range
-	  (holiday-fixed 5 4 "みどりの日") '(1 1 2007))
+          (holiday-fixed 5 4 "みどりの日") '(1 1 2007))
          ;; 国民の祝日に関する法律の一部を改正する法律 (平成26年法律第43号)
          (japanese-holiday-range
-	  (holiday-fixed 8 11 "山の日") '(1 1 2016) '(1 1 2020))
+          (holiday-fixed 8 11 "山の日") '(1 1 2016) '(1 1 2020))
          (japanese-holiday-range
           (holiday-fixed 8 11 "山の日") '(1 1 2022))
          ;; 天皇の退位等に関する皇室典範特例法 (平成29年法律第63号)
          (japanese-holiday-range
-	  (holiday-fixed 2 23 "天皇誕生日") '(5 1 2019))
+          (holiday-fixed 2 23 "天皇誕生日") '(5 1 2019))
          ;; 天皇の即位の日及び即位礼正殿の儀の行われる日を休日とする法律 (平成30年法律第99号)
          (japanese-holiday-range
-	  (holiday-fixed 5 1 "即位の日") '(12 14 2018) '(1 1 2020))
+          (holiday-fixed 5 1 "即位の日") '(12 14 2018) '(1 1 2020))
          (japanese-holiday-range
-	  (holiday-fixed 10 22 "即位礼正殿の儀") '(12 14 2018) '(1 1 2020))
+          (holiday-fixed 10 22 "即位礼正殿の儀") '(12 14 2018) '(1 1 2020))
          ;; 平成三十二年東京オリンピック競技大会・東京パラリンピック競技大会特別措置法及び 平成三十一年ラグビーワールドカップ大会特別措置法の一部を改正する法律（平成30年法律第55号）
          (japanese-holiday-range
-	  (holiday-fixed 7 23 "海の日") '(1 1 2020) '(1 1 2021))
+          (holiday-fixed 7 23 "海の日") '(1 1 2020) '(1 1 2021))
          (japanese-holiday-range
-	  (holiday-fixed 7 24 "スポーツの日") '(1 1 2020) '(1 1 2021))
+          (holiday-fixed 7 24 "スポーツの日") '(1 1 2020) '(1 1 2021))
          (japanese-holiday-range
-	  (holiday-fixed 8 10 "山の日") '(1 1 2020) '(1 1 2021))
+          (holiday-fixed 8 10 "山の日") '(1 1 2020) '(1 1 2021))
          ;; 国民の祝日に関する法律の一部を改正する法律（平成30年法律第57号）
          (japanese-holiday-range
           (holiday-float 10 1 2 "スポーツの日") '(1 1 2022))
          ;; 東京オリンピック競技大会・東京パラリンピック競技大会特別措置法等の一部を改正する法律(令和2年法律第68号)
          (japanese-holiday-range
-	  (holiday-fixed 7 22 "海の日") '(1 1 2021) '(1 1 2022))
+          (holiday-fixed 7 22 "海の日") '(1 1 2021) '(1 1 2022))
          (japanese-holiday-range
-	  (holiday-fixed 7 23 "スポーツの日") '(1 1 2021) '(1 1 2022))
+          (holiday-fixed 7 23 "スポーツの日") '(1 1 2021) '(1 1 2022))
          (japanese-holiday-range
-	  (holiday-fixed 8 8 "山の日") '(1 1 2021) '(1 1 2022))))))
+          (holiday-fixed 8 8 "山の日") '(1 1 2021) '(1 1 2022))))))
     (holiday-filter-visible-calendar
      '(;; 皇太子明仁親王の結婚の儀の行われる日を休日とする法律 (昭和34年法律第16号)
        ((4 10 1959) "明仁親王の結婚の儀")
@@ -261,10 +261,10 @@ e.g. 0 is Sunday and 6 is Saturday."
   '(holiday nil nil nil nil nil japanese-holiday-saturday)
   "*Faces to mark Weekends.  `holiday' and `diary' is possible marker.
 It can be face face, or list of faces for corresponding weekdays."
- :type '(choice face
-                (repeat (choice (const nil) face)))
- :options '(holiday diary)
- :group 'japanese-holidays)
+  :type '(choice face
+                 (repeat (choice (const nil) face)))
+  :options '(holiday diary)
+  :group 'japanese-holidays)
 
 (defface japanese-holiday-saturday
   '((((class color) (background light))
@@ -282,22 +282,22 @@ It can be face face, or list of faces for corresponding weekdays."
 
 (defun japanese-holiday-range (holidays &optional from to)
   (let ((from (and from (japanese-holiday-make-sortable from)))
-	(to   (and to   (japanese-holiday-make-sortable to))))
+        (to   (and to   (japanese-holiday-make-sortable to))))
     (delq nil
-	  (mapcar
-	   (lambda (holiday)
-	     (let ((date (japanese-holiday-make-sortable (car holiday))))
-	       (when (and (or (null from) (<= from date))
-			  (or (null to) (< date to)))
-		 holiday)))
-	   holidays))))
+          (mapcar
+           (lambda (holiday)
+             (let ((date (japanese-holiday-make-sortable (car holiday))))
+               (when (and (or (null from) (<= from date))
+                          (or (null to) (< date to)))
+                 holiday)))
+           holidays))))
 
 (defun japanese-holiday-find-date (date holidays)
   (let ((sortable-date (japanese-holiday-make-sortable date))
-	matches)
+        matches)
     (dolist (holiday holidays)
       (when (= sortable-date (japanese-holiday-make-sortable (car holiday)))
-	(setq matches (cons holiday matches))))
+        (setq matches (cons holiday matches))))
     matches))
 
 (defun japanese-holiday-add-days (date days)
@@ -312,77 +312,77 @@ It can be face face, or list of faces for corresponding weekdays."
   (let (substitutes substitute)
     (dolist (holiday holidays)
       (let ((date (car holiday)))
-	(when (and (>= (japanese-holiday-make-sortable date)
-		       (eval-when-compile
-			 (japanese-holiday-make-sortable '(4 12 1973))))
-		   (= (calendar-day-of-week date) 0))
-	  (setq substitutes
-		(cons
-		 (list (japanese-holiday-add-days date 1)
-		       (format "%s (%s)"
-			       japanese-holiday-substitute-name
-			       (cadr holiday)))
-		 substitutes)))))
+        (when (and (>= (japanese-holiday-make-sortable date)
+                       (eval-when-compile
+                         (japanese-holiday-make-sortable '(4 12 1973))))
+                   (= (calendar-day-of-week date) 0))
+          (setq substitutes
+                (cons
+                 (list (japanese-holiday-add-days date 1)
+                       (format "%s (%s)"
+                               japanese-holiday-substitute-name
+                               (cadr holiday)))
+                 substitutes)))))
     (when (setq substitutes
-		(holiday-filter-visible-calendar substitutes))
+                (holiday-filter-visible-calendar substitutes))
       (setq substitutes (sort substitutes
-			      (lambda (l r)
-				(< (japanese-holiday-make-sortable (car l))
-				   (japanese-holiday-make-sortable (car r))))))
+                              (lambda (l r)
+                                (< (japanese-holiday-make-sortable (car l))
+                                   (japanese-holiday-make-sortable (car r))))))
       (while (setq substitute (car substitutes))
-	(setq substitutes (cdr substitutes))
-	(if (japanese-holiday-find-date (car substitute) holidays)
-	    (let* ((date (car substitute))
-		   (sortable-date (japanese-holiday-make-sortable date)))
-	      (when (>= sortable-date
-			(eval-when-compile
-			  (japanese-holiday-make-sortable '(1 1 2007))))
-		(setq substitutes
-		      (cons
-		       (list (japanese-holiday-add-days date 1) (cadr substitute))
-		       substitutes))))
-	  (setq holidays (cons substitute holidays)))))
+        (setq substitutes (cdr substitutes))
+        (if (japanese-holiday-find-date (car substitute) holidays)
+            (let* ((date (car substitute))
+                   (sortable-date (japanese-holiday-make-sortable date)))
+              (when (>= sortable-date
+                        (eval-when-compile
+                          (japanese-holiday-make-sortable '(1 1 2007))))
+                (setq substitutes
+                      (cons
+                       (list (japanese-holiday-add-days date 1) (cadr substitute))
+                       substitutes))))
+          (setq holidays (cons substitute holidays)))))
     (holiday-filter-visible-calendar holidays)))
 
 (defun japanese-holiday-national (holidays)
   (when holidays
     (setq holidays (sort holidays
-			 (lambda (l r)
-			   (< (japanese-holiday-make-sortable (car l))
-			      (japanese-holiday-make-sortable (car r))))))
+                         (lambda (l r)
+                           (< (japanese-holiday-make-sortable (car l))
+                              (japanese-holiday-make-sortable (car r))))))
     (let* ((rest holidays)
-	   (curr (pop rest))
-	   prev nationals)
+           (curr (pop rest))
+           prev nationals)
       (while (setq prev curr
-		   curr (pop rest))
-	(when (= (japanese-holiday-subtract-date (car curr) (car prev)) 2)
-	  (let* ((date (japanese-holiday-add-days (car prev) 1))
-		 (sortable-date (japanese-holiday-make-sortable date)))
-	    (when (cond
-		   ((>= sortable-date
-			(eval-when-compile
-			  (japanese-holiday-make-sortable '(1 1 2007))))
-		    (catch 'found
-		      (dolist (holiday (japanese-holiday-find-date date holidays))
-			(unless (string-match
-				 (regexp-quote japanese-holiday-substitute-name)
-				 (cadr holiday))
-			  (throw 'found nil)))
-		      t))
-		   ((>= sortable-date
-			(eval-when-compile
-			  (japanese-holiday-make-sortable '(12 27 1985))))
-		    (not (or (= (calendar-day-of-week date) 0)
-			     (japanese-holiday-find-date date holidays)))))
-	      (setq nationals (cons (list date japanese-holiday-national-name)
-				    nationals))))))
+                   curr (pop rest))
+        (when (= (japanese-holiday-subtract-date (car curr) (car prev)) 2)
+          (let* ((date (japanese-holiday-add-days (car prev) 1))
+                 (sortable-date (japanese-holiday-make-sortable date)))
+            (when (cond
+                   ((>= sortable-date
+                        (eval-when-compile
+                          (japanese-holiday-make-sortable '(1 1 2007))))
+                    (catch 'found
+                      (dolist (holiday (japanese-holiday-find-date date holidays))
+                        (unless (string-match
+                                 (regexp-quote japanese-holiday-substitute-name)
+                                 (cadr holiday))
+                          (throw 'found nil)))
+                      t))
+                   ((>= sortable-date
+                        (eval-when-compile
+                          (japanese-holiday-make-sortable '(12 27 1985))))
+                    (not (or (= (calendar-day-of-week date) 0)
+                             (japanese-holiday-find-date date holidays)))))
+              (setq nationals (cons (list date japanese-holiday-national-name)
+                                    nationals))))))
       (setq holidays (nconc holidays
-			    (holiday-filter-visible-calendar nationals)))))
+                            (holiday-filter-visible-calendar nationals)))))
   holidays)
 
 (defun japanese-holiday-mark-weekend ()
   (let ((m displayed-month)
-	(y displayed-year))
+        (y displayed-year))
     (calendar-increment-month m y -1)
     (cl-loop
      repeat 3 do
@@ -403,4 +403,10 @@ It can be face face, or list of faces for corresponding weekdays."
      (calendar-increment-month m y 1))))
 
 (provide 'japanese-holidays)
+
+;; Local Variables:
+;; indent-tabs-mode: nil
+;; coding: utf-8
+;; End:
+
 ;;; japanese-holidays.el ends here
