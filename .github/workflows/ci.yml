@@ -13,14 +13,12 @@ jobs:
     strategy:
       matrix:
         emacs_version:
-          - 25.1
-          - 26.1
-          - 26.2
-          - 26.3
-          - 27.1
-          - 'snapshot'
+          - "25.1"
+          - "30.2"
+          - "31.1"
+          - "snapshot"
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v6
       - uses: purcell/setup-emacs@master
         with:
           version: ${{ matrix.emacs_version }}
