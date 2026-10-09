@@ -128,7 +128,9 @@
      (holiday-fixed 11 3 "明治節") '(3 3 1927) '(7 20 1948))
     (japanese-holiday-range
      (holiday-fixed 12 25 "大正天皇祭") '(3 3 1927) '(7 20 1948))
-    (let ((calendar-total-months (max 3 calendar-total-months)))
+    ;; calendar-total-months is introduced since Emacs 31
+    (let ((calendar-total-months (when (bound-and-true-p calendar-total-months)
+				   (max 3 calendar-total-months))))
       ;; 国民の祝日に関する法律の一部を改正する法律 (昭和60年法律第103号)
       (japanese-holiday-national
        ;; 国民の祝日に関する法律の一部を改正する法律 (昭和48年法律第10号)
